@@ -22,6 +22,7 @@
                 <th scope="col">Nombre</th>
                 <th scope="col">Numero</th>
                 <th scope="col">Email</th>
+                <th scope="col"></th>
               </tr>
             </thead>
             <tbody>
@@ -30,6 +31,12 @@
                 <td th:text="${contacto.nombre}">Usuario 1</td>
                 <td th:text="${contacto.celular}">000000000</td>
                 <td th:text="${contacto.email}">prueba@gmail.com</td>
+                <td>
+                  <div class="container text-center">
+                    <a th:href="@{/editar/{id}(id=${contacto.id})}" type="button" class="btn btn-outline-info text-center me-3">Editar</a>
+                    <a th:href="@{/eliminar/{id}(id=${contacto.id})}" type="button" class="btn btn-outline-danger text-center">Eliminar</a>
+                  </div>
+                </td>
               </tr>
             </tbody>
           </table>
